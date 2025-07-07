@@ -21,4 +21,3 @@ yarn-error.log*
 
 # Optional: Env files at root if any
 .env
-.env.*
