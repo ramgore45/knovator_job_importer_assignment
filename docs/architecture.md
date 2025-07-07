@@ -45,56 +45,50 @@ A scalable job importer system pulling data from multiple job feed APIs (XML), c
 📊 Collections
 
 1. jobs
-
-    jobId
-
-    title
-
-    company
-
-    location
-
-    url
-
-    datePosted
-
-    jobType
-
-    mediaContent
+    - jobId
+    - title
+    - company
+    - location
+    - url
+    - pubDate
+    - description
+    - content
+    - image
+    - jobType
+    - guid
+    - feedSource
 
 2. import_logs
-
-    fileName
-
-    importDateTime
-
-    total
-
-    new
-
-    updated
-
-    failed
-
-    failedReasons
+    - fileName
+    - importDateTime
+    - total
+    - new
+    - updated
+    - failed
+    - failures: [
+        {
+            job: '',
+            reason: '
+        }
+    ]
 
 
 🔧 Scalability Considerations
 
-    Job queue concurrency configurable
+    - Job queue concurrency configurable
 
-    Can scale to multiple worker processes
+    - Can scale to multiple worker processes
 
-    Ready for microservices by splitting:
+    - Ready for microservices by splitting:
 
-    Feed fetch service
+    - Feed fetch service
 
-    Queue service
+    - Queue service
 
-    API service
+    - API service
 
-    Frontend service
+    - Frontend service
 
-    Redis Cloud for distributed queues
+    - Redis Cloud for distributed queues
 
-    MongoDB Atlas for cloud-hosted DB
+    - MongoDB Atlas for cloud-hosted DB
